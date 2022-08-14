@@ -1,0 +1,33 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model SignInViewModel;
+
+
+<h1>Sign In</h1>
+
+<form asp-controller="Identity" asp-action="SignIn" method="post">
+    @Html.ValidationSummary();
+
+    <div class="form-group col-4">
+        <label asp-for="UserName">UserName:</label>
+        <input type="text" asp-for="UserName" class="form-control" />
+    </div>
+
+
+    <div class="form-group col-4">
+        <label asp-for="Password">Password:</label>
+        <input type="text" asp-for="Password" class="form-control" />
+    </div>
+
+
+    <div class="form-group col-4">
+        <input type="checkbox" asp-for="RememberMe" class="form-control" /> Remember me
+    </div>
+    <button type="submit" class="btn btn-primary">Sign In</button>
+
+</form>
+
